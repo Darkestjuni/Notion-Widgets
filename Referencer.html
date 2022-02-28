@@ -53,7 +53,17 @@
     </div>
     </div>
     <script>
-        
+    const { Client } = require('@notionhq/client');
+
+    const notion = new Client({ auth: process.env.secret_MjLHVSZyTunozCvpNVoPZfIV5tUH0ONnBEMGZvfcCBg});
+
+    (async () => {
+        const blockId = '0ff18ea9257147a6b9b9c34a344d47ef';
+        const response = await notion.blocks.children.list({
+        block_id: blockId,
+        });
+    console.log(response);
+    })();
     </script>
 </body>
 </html>
