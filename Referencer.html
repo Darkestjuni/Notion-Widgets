@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Nifty Tool to properly display tabular Numbers</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,29 @@
     <style>
     .container{
     width: 50%;
-    height: 200px;
+    height: auto;
     display: flex;
     padding: 16px;
     border-radius: 16px;
-    background-color: gray;
+    background: rgba(255, 213, 98, 0.5);
+    box-shadow: 0 8px 8px 0 rgba(155, 112, 18, 0.2);
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     justify-content: center;
     align-items: center;
     }
     .container2{
     width: 50%;
-    height: 200px;
+    height: auto;
     display: flex;
     padding: 16px;
     border-radius: 16px;
-    background-color: gray;
+    background: rgba( 149, 244, 209, 0.5 );
+    box-shadow: 0 8px 8px 0 rgba(90, 189, 77, 0.2);
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     justify-content: center;
     align-items: center;
     margin-left: 32px;
@@ -33,12 +42,13 @@
     .big-wrapper{
     display:flex;
     flex-direction:row;
-    width: 800px;
+    width: auto;
     }
     .zahlen{
         font-size: 2.5rem;
         font-family: 'Roboto', sans-serif;
         text-align: center;
+        color:rgba(0, 0, 0, 0.76);
     }
     </style>
 </head>
@@ -46,7 +56,6 @@
     <div class="big-wrapper">
     <div class="container">
     <p class="zahlen" id="kosten">Testtext</p>
-
     </div>
     <div class="container2">
     <p class="zahlen" id="overflow">Testtext2</p>
@@ -94,42 +103,6 @@ document.getElementById("overflow").innerHTML = neuneu2;
 }};
 
 xhr2.send();
-
-//works!
-/*
-jsonDaten= '{"range": "Tabellenblatt1!B2:C2", "majorDimension": "ROWS", "values": [["April: 65 €","Overflow: 735 €"]]}';
-
-neu = jsonDaten.slice(67);
-console.log(neu);
-
-var neuneu = neu.substring(
-neu.indexOf("[[") + 1,
-neu.lastIndexOf("€") + 1,
-)
-
-console.log(neuneu);
-*/
-
-//useful
-/*
-var inhalte = Object.keys(jsonDaten.range)
-
-console.log(inhalte)
-
-document.getElementById('container1').textContent = inhalte.toString()
-
-var i = -1,
-	len = inhalte.length
-
-function handleInhalte(inhaltsart){
-	console.log("This is the " + inhaltsart + " data.")
-	console.log(jsonDaten.values[inhaltsart])
-}
-
-while (++i < len){
-handleInhalte(inhalte[i])
-}
-*/
 </script>
 </body>
 </html>
