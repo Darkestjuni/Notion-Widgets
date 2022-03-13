@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">   
+    <title>Titel</title>
+    <style>
+       
+        .schrift{
+            font-size: 2rem;
+            text-align: center;
+            color:rgb(33, 55, 66);
+            font-family: 'Poppins', sans-serif;
+            padding: 16px;
+            margin: 0px;
+            display: flex;
+        }
+
+        .singlewrap{
+            border-radius: 16px;
+            border-color:rgb(190, 209, 221);
+            border-style: solid;
+            border-width: 2px;
+            width: auto;
+            height: auto;
+            display: flex;
+            background-color:rgb(245, 245, 245);
+            box-shadow: 0px 4px 8px  rgba(0, 0, 0, 0.1);
+        }
+        .wrapper{
+            justify-content: center;
+            display: flex;
+        }
+            @media (prefers-color-scheme: dark){
+            .singlewrap{
+                border-style: solid;
+                border-width: 2px;
+                border-color:rgb(92, 230, 230);
+                background-color: rgb(46, 74, 87);
+            }
+            .schrift{
+                color:white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="singlewrap">
+        <p class="schrift">Heute</p>
+        </div>
+    </div>
+</body>
+</html>
